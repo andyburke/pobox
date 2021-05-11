@@ -2,9 +2,9 @@ const fastify = require( 'fastify' );
 const parse_duration = require( 'parse-duration' );
 const tinycache = require( 'tinycache' );
 
-module.exports = () => {
+module.exports = ( options = {} ) => {
 	const cache = new tinycache();
-	const app = fastify();
+	const app = fastify( options );
 
 	app.register( require( 'fastify-raw-body' ), {
 		field: 'raw_body',
@@ -50,6 +50,7 @@ module.exports = () => {
 		}
 
 		const box = cache.get( request.url );
+
 		if ( typeof box?.key === 'string' ) {
 			if ( request.headers[ 'x-pobox-box-key' ] !== box.key ) {
 				return reply
