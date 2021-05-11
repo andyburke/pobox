@@ -1,0 +1,27 @@
+{
+  "name": "pobox",
+  "version": "1.0.0",
+  "description": "A simple key/value store in HTTP.",
+  "repository": "github:andyburke/pobox",
+  "main": "index.js",
+  "bin": {
+    "pobox": "pobox.js"
+  },
+  "scripts": {
+    "test": "node test/run.js | tap-spec"
+  },
+  "author": "Andy Burke <andy.burke@mailbox.earth>",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.15.1",
+    "fastify-raw-body": "^3.1.0",
+    "parse-duration": "^1.0.0",
+    "tinycache": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "got": "^11.8.2",
+    "plaintest": "^0.1.0",
+    "tap-spec": "^5.0.0"
+  }
+}
