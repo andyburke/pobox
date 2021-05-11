@@ -1,8 +1,11 @@
 {
   "name": "pobox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple key/value store in HTTP.",
   "repository": "github:andyburke/pobox",
+  "engines" : { 
+    "node" : ">=14.0.0"
+  },
   "main": "index.js",
   "bin": {
     "pobox": "pobox.js"
