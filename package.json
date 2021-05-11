@@ -1,6 +1,6 @@
 {
-  "name": "pobox",
-  "version": "1.0.1",
+  "name": "@andyburke/pobox",
+  "version": "1.0.2",
   "description": "A simple key/value store in HTTP.",
   "repository": "github:andyburke/pobox",
   "engines" : { 
