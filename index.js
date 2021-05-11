@@ -7,9 +7,7 @@ module.exports = ( options = {} ) => {
 	const app = fastify( options );
 
 	app.register( require( 'fastify-raw-body' ), {
-		field: 'raw_body',
-		encoding: false, // set it to false to set rawBody as a Buffer **Default utf8**
-		runFirst: true // get the body before any preParsing hook change/uncompress it. **Default false**
+		field: 'raw_body'
 	} );
 
 	app.post( '/__clear', ( request, reply ) => {
